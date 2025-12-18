@@ -124,49 +124,7 @@ nav a.active{
 .cookie a{
     color:#00c3ff;
 }
-/* DIAGNOSA LAYOUT */
-.diagnosa-layout{
-    display:flex;
-    gap:50px;
-    padding:80px 60px;
-    background:#2f7aeb;
-    align-items:center;
-}
 
-.diagnosa-image img{
-    width:100%;
-    max-width:420px;
-    border-radius:12px;
-}
-
-.diagnosa-info h1{
-    font-size:36px;
-    margin-bottom:15px;
-}
-
-.diagnosa-info p{
-    line-height:1.7;
-    color:#000000;
-}
-
-.diagnosa-list{
-    margin-top:20px;
-    list-style:none;
-}
-
-.diagnosa-list li{
-    margin-bottom:10px;
-    padding-left:30px;
-    position:relative;
-}
-
-.diagnosa-list li::before{
-    content:"✔";
-    position:absolute;
-    left:0;
-    color:#d35400;
-    font-weight:bold;
-}
 
 /* FITUR GRID */
 .diagnosa-features{
@@ -357,3 +315,4 @@ nav a.active{
     object-fit:cover;
     display:block;
 }
+
