@@ -2,103 +2,251 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Diagnosa</title>
+    <title>Implikasi - Jaringan Internet Spek Dewa</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif; /* Font yang lebih modern */
+            line-height: 1.6;
+            color: #fff; /* Teks putih */
+            background: linear-gradient(135deg, #2f7aeb, #1e3a8a); /* Gradien latar belakang */
+            animation: gradientAnimation 10s ease infinite; /* Animasi gradien */
+            background-size: 200% 200%;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.2); /* Latar belakang navbar transparan */
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(5px); /* Efek blur pada latar belakang */
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo-box {
+            width: 40px;
+            height: 40px;
+            background-color: #ff0000;
+            margin-right: 10px;
+        }
+        .logo h2 {
+            color: #fff;
+            font-size: 1.2rem;
+        }
+        .logo span {
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+        nav {
+            display: flex;
+            gap: 1rem;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: background-color 0.3s;
+        }
+        nav a:hover, nav a.active {
+            background-color: rgba(255, 255, 255, 0.1); /* Efek hover yang lebih halus */
+            border-radius: 4px;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: rgba(255, 255, 255, 0.1); /* Latar belakang container transparan */
+            border-radius: 18px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3); /* Efek bayangan yang lebih kuat */
+            backdrop-filter: blur(5px); /* Efek blur pada latar belakang */
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #fff; /* Teks putih */
+            text-align: center;
+            animation: fadeIn 1s ease-in-out; /* Animasi fade-in */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #eee; /* Warna teks yang lebih terang */
+            margin-bottom: 1.5rem;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        li {
+            font-size: 1.1rem;
+            color: #eee; /* Warna teks yang lebih terang */
+            margin-bottom: 0.5rem;
+        }
+
+        /* Implikasi Section */
+        .implikasi-section {
+            margin-bottom: 2rem;
+            animation: slideInLeft 1s ease-in-out; /* Animasi slide-in */
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .implikasi-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #fff; /* Teks putih */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1.5rem;
+                margin: 1rem auto;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            p, li {
+                font-size: 1rem;
+            }
+
+            .implikasi-section h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 1.7rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
 <header class="navbar">
     <div class="logo">
         <span class="logo-box"></span>
-        <h2>Sistem Pakar<br><span>Diagnosa Kerusakan Komputer</span></h2>
+        <h2>Jaringan Komputer<br><span>Berbasis Spek Dewa</span></h2>
     </div>
     <nav>
-         <a href="index.html"class="active">Home</a>
-        <a href="diagnosa.html" class="active">Diagnosa</a>
-        <a href="about.html" class="active">About</a>
-        <a href="diagram-tree.html"class="active">Diagram Tree</a>
-        <a href="implikasi.html"class="active">Implikasi</a>
+        <a href="index.html">Home</a>
+        <a href="diagnosa.html">Diagnosa</a>
+        <a href="about.html">About</a>
+        <a href="diagram-tree.html">Diagram Tree</a>
+        <a href="implikasi.html" class="active">Implikasi</a>
     </nav>
 </header>
 
-<!-- ===== DIAGNOSA SECTION ===== -->
-<section class="diagnosa-layout">
+<div class="container">
+    <h1>Implikasi</h1>
 
-    <div class="diagnosa-image">
-        <img src="assets/content.jpg" alt="Diagnosa Image">
-    </div>
-
- <!-- ===== PERTANYAAN DIAGNOSA ===== -->
-<section class="diagnosa-question">
-    <h2>Apakah berhenti saat bootscreen?</h2>
-
-     <div class="diagnosa-buttons">
-    <a href="#.html">
-        <button class="btn-yes">Ya</button>
-    </a>
-
-    <a href="D13.html">
-        <button class="btn-no">Tidak</button>
-    </a>
-</div>
-</section>
-
-
-    <div class="diagnosa-info">
-        <h1>Diagnosa Sistem</h1>
+    <section class="implikasi-section">
+        <h2>Implikasi Teknis</h2>
         <p>
-            Sistem diagnosa ini dirancang untuk membantu pengguna
-            dalam mengidentifikasi kondisi awal berdasarkan gejala
-            yang dipilih melalui pendekatan berbasis aturan dan data.
+            Implementasi Jaringan Spek Dewa memiliki implikasi teknis yang signifikan.
+            Peningkatan kecepatan dan stabilitas jaringan memerlukan infrastruktur
+            yang mumpuni, termasuk perangkat keras dan perangkat lunak terbaru.
         </p>
-
-       
-
-
-        <ul class="diagnosa-list">
-            <li>Proses diagnosa cepat dan sistematis</li>
-            <li>Berbasis aturan dan logika sistem pakar</li>
-            <li>Mendukung pengambilan keputusan awal</li>
-            <li>Antarmuka sederhana dan mudah digunakan</li>
+        <ul>
+            <li>Peningkatan bandwidth jaringan</li>
+            <li>Penggunaan protokol komunikasi yang lebih efisien</li>
+            <li>Optimasi konfigurasi perangkat jaringan</li>
         </ul>
-    </div>
+    </section>
 
-</section>
+    <section class="implikasi-section">
+        <h2>Implikasi Biaya</h2>
+        <p>
+            Adopsi teknologi Jaringan Spek Dewa juga membawa implikasi biaya.
+            Investasi awal mungkin tinggi, tetapi potensi penghematan jangka panjang
+            dapat dicapai melalui peningkatan produktivitas dan efisiensi operasional.
+        </p>
+        <ul>
+            <li>Biaya pengadaan perangkat keras dan perangkat lunak</li>
+            <li>Biaya pelatihan dan pengembangan sumber daya manusia</li>
+            <li>Potensi penghematan biaya operasional</li>
+        </ul>
+    </section>
 
-<!-- ===== FITUR ===== -->
-<section class="diagnosa-features">
-    <div class="feature-box">
-        <span>✔</span>
-        <h4>Input Gejala</h4>
-        <p>Pengguna memilih gejala yang dialami.</p>
-    </div>
-    <div class="feature-box">
-        <span>✔</span>
-        <h4>Proses Diagnosa</h4>
-        <p>Sistem memproses data berdasarkan aturan.</p>
-    </div>
-    <div class="feature-box">
-        <span>✔</span>
-        <h4>Hasil Analisis</h4>
-        <p>Menampilkan hasil diagnosa awal.</p>
-    </div>
-    <div class="feature-box">
-        <span>✔</span>
-        <h4>Rekomendasi</h4>
-        <p>Saran tindakan lanjutan bagi pengguna.</p>
-    </div>
-    <div class="feature-box">
-        <span>✔</span>
-        <h4>Data Tersimpan</h4>
-        <p>Riwayat diagnosa dapat disimpan.</p>
-    </div>
-    <div class="feature-box">
-        <span>✔</span>
-        <h4>Berbasis AI</h4>
-        <p>Dapat dikembangkan dengan AI / Fuzzy.</p>
-    </div>
-</section>
+    <section class="implikasi-section">
+        <h2>Implikasi Keamanan</h2>
+        <p>
+            Keamanan jaringan menjadi prioritas utama dalam implementasi Jaringan Spek Dewa.
+            Langkah-langkah keamanan yang ketat harus diterapkan untuk melindungi data
+            sensitif dan mencegah akses yang tidak sah.
+        </p>
+        <ul>
+            <li>Implementasi firewall dan sistem deteksi intrusi</li>
+            <li>Enkripsi data dan otentikasi multi-faktor</li>
+            <li>Pemantauan dan audit keamanan secara berkala</li>
+        </ul>
+    </section>
+
+    <p>
+        Dengan mempertimbangkan implikasi-implikasi ini, organisasi dapat merencanakan
+        dan melaksanakan implementasi Jaringan Spek Dewa secara efektif, memaksimalkan
+        manfaatnya, dan meminimalkan risiko yang mungkin timbul.
+    </p>
+</div>
 
 </body>
 </html>
