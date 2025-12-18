@@ -4,7 +4,224 @@
     <meta charset="UTF-8">
     <title>Diagnosa</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo-box {
+            width: 40px;
+            height: 40px;
+            background-color: #ff0000;
+            margin-right: 10px;
+        }
+        .logo h2 {
+            color: #fff;
+            font-size: 1.2rem;
+        }
+        .logo span {
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+        nav {
+            display: flex;
+            gap: 1rem;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: background-color 0.3s;
+        }
+        nav a:hover, nav a.active {
+            background-color: #555;
+            border-radius: 4px;
+        }
+
+        /* Diagnosa Layout */
+        .diagnosa-layout {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 2rem;
+        }
+        .diagnosa-image {
+            flex: 1;
+            min-width: 300px;
+        }
+        .diagnosa-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .diagnosa-question {
+            flex: 1;
+            min-width: 300px;
+            text-align: left;
+        }
+        .diagnosa-question h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        .diagnosa-question h3 {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        .diagnosa-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .btn-yes, .btn-no {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .btn-yes {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .btn-yes:hover {
+            background-color: #45a049;
+        }
+        .btn-no {
+            background-color: #f44336;
+            color: white;
+        }
+        .btn-no:hover {
+            background-color: #da190b;
+        }
+        .diagnosa-info {
+            flex: 1;
+            min-width: 300px;
+        }
+        .diagnosa-info h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        .diagnosa-info p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        .diagnosa-list {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+        }
+        .diagnosa-list li {
+            margin-bottom: 0.5rem;
+            color: #666;
+        }
+
+        /* Features Section */
+        .diagnosa-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .feature-box {
+            background-color: #fff;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .feature-box span {
+            font-size: 2rem;
+            color: #4CAF50;
+        }
+        .feature-box h4 {
+            margin: 0.5rem 0;
+            color: #333;
+        }
+        .feature-box p {
+            color: #666;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 1rem;
+            }
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                margin: 1rem 0;
+            }
+            .diagnosa-layout {
+                flex-direction: column;
+                padding: 1rem;
+            }
+            .diagnosa-question {
+                text-align: left;
+            }
+            .diagnosa-question h2 {
+                font-size: 1.3rem;
+            }
+            .diagnosa-info h1 {
+                font-size: 1.5rem;
+            }
+            .diagnosa-features {
+                grid-template-columns: 1fr;
+                padding: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo h2 {
+                font-size: 1rem;
+            }
+            nav a {
+                padding: 0.5rem;
+                font-size: 0.9rem;
+            }
+            .diagnosa-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            .btn-yes, .btn-no {
+                width: 100%;
+                max-width: 200px;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -14,11 +231,11 @@
         <h2>Jaringan Komputer<br><span>Berbasis Spek Dewa</span></h2>
     </div>
     <nav>
-        <a href="index.html"class="active">Home</a>
+        <a href="index.html" class="active">Home</a>
         <a href="diagnosa.html" class="active">Diagnosa</a>
         <a href="about.html" class="active">About</a>
-        <a href="diagram-tree.html"class="active">Diagram Tree</a>
-        <a href="implikasi.html"class="active">Implikasi</a>
+        <a href="diagram-tree.html" class="active">Diagram Tree</a>
+        <a href="implikasi.html" class="active">Implikasi</a>
     </nav>
 </header>
 
@@ -31,12 +248,9 @@
 
  <!-- ===== PERTANYAAN DIAGNOSA ===== -->
 <section class="diagnosa-question">
-    <h2>Silahkan untuk merestart modem</h2><br>
-<h3>Rule 1 : G01 > D01</h3>
-
-
+    <h2>Silahkan untuk merestart modem</h2>
+    <h3>Rule 1 : G01 > D01</h3>
 </section>
-
 
     <div class="diagnosa-info">
         <h1>Diagnosa Sistem Jaringan</h1>
@@ -47,9 +261,6 @@
              Antarmuka yang sederhana dan mudah digunakan akan memandu Anda langkah
              demi langkah.
         </p>
-
-       
-
 
         <ul class="diagnosa-list">
             <li>Proses diagnosa cepat dan sistematis</li>
