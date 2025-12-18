@@ -147,37 +147,6 @@ nav a.active{
     height:45p
 }
 
-/* PERTANYAAN DIAGNOSA */
-.diagnosa-question{
-    background:#e0e0e0;
-    padding:70px 20px;
-    text-align:center;
-}
-
-.diagnosa-question h2{
-    font-size:32px;
-    margin-bottom:30px;
-    color:#333;
-}
-
-/* BUTTON */
-.diagnosa-buttons{
-    display:flex;
-    justify-content:center;
-    gap:30px;
-}
-
-.diagnosa-buttons button{
-    width:160px;
-    padding:14px 0;
-    font-size:18px;
-    border:none;
-    border-radius:8px;
-    cursor:pointer;
-    font-weight:600;
-    transition:0.3s;
-}
-
 .btn-yes{
     background:#27ae60;
     color:#fff;
@@ -315,4 +284,5 @@ nav a.active{
     object-fit:cover;
     display:block;
 }
+
 
