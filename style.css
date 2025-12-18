@@ -125,16 +125,6 @@ nav a.active{
     color:#00c3ff;
 }
 
-
-/* FITUR GRID */
-.diagnosa-features{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:30px;
-    padding:60px;
-    background:#e0e0e0;
-}
-
 .feature-box{
     background:#e0e0e0;
     text-align:center;
@@ -284,5 +274,6 @@ nav a.active{
     object-fit:cover;
     display:block;
 }
+
 
 
